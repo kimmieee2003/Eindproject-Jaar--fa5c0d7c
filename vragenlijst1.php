@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/vragenlijst1.html">
+<form action="/vragenlijst1.php">
 <label for="username">Hoe voel je je vandaag op een schaal van 1 tot 10? </label><br>
 <div class="stars" data-rating="1">
         <span class="star">&nbsp;</span>
