@@ -17,7 +17,7 @@ hierboven komt de grafiek!!
 <input type="date" id="start" name="trip-start"
        value="2020-01-04"
        min="2020-01-04" max="2020-08-24">
-<input type="submit" value="Verzenden">
+<input type="submit" value="Verzenden" ><a href="vragenlijststudenten.php"></a>
 </form>
 </body>
 </html>
