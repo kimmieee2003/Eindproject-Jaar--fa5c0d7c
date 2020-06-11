@@ -11,7 +11,7 @@
     <div class="vak">
         <div class="grafiek">hierboven komt de grafiek!!</div>
 
-        <form form action="/vragenlijst2.php">
+        <form form action="/vragenlijst2-choach.php">
             <p class="text">Wil je een gesprek met iemand?</p>
             <div id="keuze">
                 <input class="radio-knop" type="radio" id="ja" name="antwoord" value="ja">

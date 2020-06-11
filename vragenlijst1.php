@@ -31,7 +31,7 @@ try {
     <title>Vragen</title>
 </head>
 <body>
-    <form class="vak" action="/vragenlijst1.html">
+    <form class="vak" action="/vragenlijst1.php">
         <label class="text" for="username">Hoe voel je je vandaag op een schaal van 1 tot 10? </label><br>
         <div class="stars" data-rating="1">
             <span class="star">&nbsp;</span>

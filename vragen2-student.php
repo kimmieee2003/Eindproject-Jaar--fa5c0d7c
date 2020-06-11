@@ -10,7 +10,7 @@
 <body>
     <div class="vak">
         <div class="grafiek">Hier komt de grafiek</div>
-            <form form action="/vragenlijststudenten.php">
+            <form form action="/vragen2-student.php">
                 <label class="text" for="vraag">wil je een gesprek met een coach?</label><br>
                 <div id="keuze">
                     <input class="radio-knop" type="radio" id="ja" name="antwoord" value="ja">
