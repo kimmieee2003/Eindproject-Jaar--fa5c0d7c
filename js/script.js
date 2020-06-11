@@ -29,5 +29,7 @@ function setRating(ev) {
         }
     });
     document.querySelector('.stars').setAttribute('data-rating', num);
+    // num is het aantal sterren dat is aangeklickt
+    console.log (num);
 }
 
