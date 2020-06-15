@@ -1,3 +1,5 @@
+// var Array = key;
+// var key = value;
 
 //de setup
 document.addEventListener('DOMContentLoaded', function () {
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
-    let target = stars[rating - 1];
+    let target = stars[rating - 0];
     target.dispatchEvent(new MouseEvent('click'));
 });
 
@@ -28,8 +30,11 @@ function setRating(ev) {
             num = index + 1;
         }
     });
+    // var value = num;
+
     document.querySelector('.stars').setAttribute('data-rating', num);
-    // num is het aantal sterren dat is aangeklickt
-    console.log (num);
+    document.getElementById("custId").value = num;
 }
+
+
 

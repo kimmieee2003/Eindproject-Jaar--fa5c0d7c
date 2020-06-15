@@ -32,9 +32,10 @@ try {
 </head>
 <body>
 
-    <form class="vak" action="/submitrating.php">
-        <label class="text" for="username">Hoe voel je je vandaag op een schaal van 1 tot 10? </label><br>
-        <div class="stars" data-rating="1">
+    <form id="form" class="vak" action="vragenlijst1.php">
+        <label class="number" for="username">Hoe voel je je vandaag op een schaal van 1 tot 10? </label><br>
+        <input type="hidden" id="custId" name="custId" value="0">
+        <div class="stars" data-rating="0">
             <span class="star">&nbsp;</span>
             <span class="star">&nbsp;</span>
             <span class="star">&nbsp;</span>
@@ -51,8 +52,9 @@ try {
             <textarea class="msg" name="user_message"></textarea>
             <input class="submit" type="submit" value="Submit">
         </div>
-
+    <?php print($_GET["custId"]. $_GET["user_message"]); ?>
     </form>
+
     <script src="js/script.js"></script>
 </body>
 </html>
