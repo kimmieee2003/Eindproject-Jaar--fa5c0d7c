@@ -28,28 +28,38 @@ Nog iets te zeggen?<br><?php echo $_GET["user_message"]; ?><br><br>
 <?php
 //database code
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "healthtracker";
-$_GET["custId"] = "cijfer";
+var_dump($_POST);
 
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+$host = 'localhost';
+$db   = 'healthtracker';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+    // echo("Connected to: " . $db . " on " . $host . " version: " . phpversion());
+    // echo("<br>");
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-$sql = "INSERT INTO checkupS (student_id, cijfer) VALUES ('?','?')";
+// search submission ID
+$stmt = $pdo->prepare("INSERT INTO checkupS (student_id, cijfer) VALUES (?,?);");
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+if ($stmt->execute(array('student_id'=> $_POST["student_id"], 'cijfer'=> $_POST["cijfer"]))) {
 
-$conn->close();
+    //hoeft niks te staan
+ }
+
+//haal de id en cijfer uit de post array.
+// voer de query uit die in de database staat (insert into).
+
+
 ?>
 
