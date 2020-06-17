@@ -26,3 +26,5 @@ CREATE TABLE checkupC (
     cijfer int,
     FOREIGN KEY (coach_id) REFERENCES coach(id)
 ); */
+INSERT INTO checkupS (student_id, cijfer) 
+VALUES (1,7);

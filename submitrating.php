@@ -24,3 +24,34 @@ Je hebt <?php echo $_GET["custId"]; ?> sterren aangegeven<br>
 Nog iets te zeggen?<br><?php echo $_GET["user_message"]; ?><br><br>
 
 <?php print($_GET["custId"]. $_GET["user_message"]); ?>
+
+<?php
+//database code
+
+
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "healthtracker";
+
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO checkupS (student_id, cijfer) VALUES ('?','?')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
