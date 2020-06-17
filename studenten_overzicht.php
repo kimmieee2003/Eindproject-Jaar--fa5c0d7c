@@ -1,3 +1,24 @@
+<?php
+$host = 'localhost';
+$db   = 'healthtracker';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+try {
+    $dbh = new PDO($dsn, $user, $pass, $options);
+    // echo("Connected to: " . $db . " on " . $host . " version: " . phpversion());
+    // echo("<br>");
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+?>
 <!DOCTYPE.html>
 <html>
 
@@ -11,15 +32,18 @@
 
 
 <body>
-    
-    <nav class="navigatie-balk">
-        <img src="images\bit_academy_logo_white.png">
-    </nav>
+    <header>
+        <nav class="navigatie-balk">
+            <img src="images\bit_academy_logo_white.png">
+        </nav>
+    </header>
+    <main>
+        Studenten overzicht
 
-    <h1>Studenten overzicht</h1>
+    </main>
+    <footer>
+    </footer>
 
-
-    
 </body>
 
 </html>

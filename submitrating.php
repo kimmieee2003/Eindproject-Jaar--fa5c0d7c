@@ -23,18 +23,16 @@ try {
 Je hebt <?php echo $_GET["custId"]; ?> sterren aangegeven<br>
 Nog iets te zeggen?<br><?php echo $_GET["user_message"]; ?><br><br>
 
-<?php print($_GET["custId"]. $_GET["user_message"]); ?>
+<!-- <?php print($_GET["custId"]. $_GET["user_message"]); ?> -->
 
 <?php
 //database code
-
-
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "healthtracker";
-
+$_GET["custId"] = "cijfer";
 
 
 // Create connection
