@@ -56,7 +56,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		maximum: 10
 	},
 	data: [{
-		type: "column",
+		type: "line",
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
