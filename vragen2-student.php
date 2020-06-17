@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style-vragen.css">
     <link rel="stylesheet" href="css/vragenlijststudenten.css">
+    <link rel="icon" href="images/bit_b_logo_white.png">
+
     <title>Vragen voor studenten</title>
 </head>
 <body>
