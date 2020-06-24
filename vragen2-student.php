@@ -60,7 +60,7 @@
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
 
-        <form form action="/vragen2-student.php">
+        <form form action="gebruiker_overzicht.php">
             <label class="text" for="vraag">wil je een gesprek met een coach?</label><br>
             <div id="keuze">
                 <input class="radio-knop" type="radio" id="ja" name="antwoord" value="ja">
