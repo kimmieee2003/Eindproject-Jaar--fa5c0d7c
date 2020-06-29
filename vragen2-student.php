@@ -61,7 +61,7 @@
         </div>
 
         <form form action="/vragen2-student.php">
-            <label class="text" for="vraag">wil je een gesprek met een coach?</label><br>
+            <label class="text" for="vraag">Wil je een gesprek met een coach?</label><br>
             <div id="keuze">
                 <input class="radio-knop" type="radio" id="ja" name="antwoord" value="ja">
                 <label class="radio-knop"  for="ja">Ja</label><br>                
