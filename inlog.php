@@ -13,7 +13,7 @@
         <img src="https://jarvis.bit-academy.nl/assets/images/logo_black.png">
     </div>
 
-    <form class="form" action="vragenlijst1.php" method="post">
+    <form class="form" action="geef_naam.php" method="post">
 
         <label for="email"><p>E-mail</p></label>
         <div class="border">

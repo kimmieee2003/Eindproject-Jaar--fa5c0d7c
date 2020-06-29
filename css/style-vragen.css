@@ -81,5 +81,9 @@ body{
 #chartContainer{
     width: 100%;
     height: 100%;
-    over
+}
+
+option, #naam{
+    color: #000000;
+    font-size: 20px;
 }
