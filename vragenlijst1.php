@@ -34,9 +34,15 @@ try {
     <title>Vragen</title>
 </head>
 <body>
-<div id="container">
+<div class="container">
     <div id="slider">
         <ul class="slides">
+            <li class="slide">
+                <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+            </li>
             <li class="slide">
                 <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
                 <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
@@ -59,7 +65,7 @@ try {
     </div>
 </div>
 
-    <!-- <form id="form" class="vak" action="vragen2-student.php">
+    <form id="form" class="vak" action="vragen2-student.php">
         <label class="text" for="username">Hoe voel je je vandaag op een schaal van 1 tot 10? </label><br>
         <input type="hidden" id="custId" name="custId" value="0">
         <div class="stars" data-rating="0">
@@ -79,20 +85,47 @@ try {
             <textarea class="msg" name="user_message"></textarea>
             <input class="submit" type="submit" value="Submit">
         </div>
-    </form> -->
+    </form>
 
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Jquery/jquery.steps.js"></script>
     <script src="Jquery/jquery.steps.min.js"></script>
     <script>
-        $(function() {
 
-            setInterval(function(){
-                $('#slider .slides').animate({'margin-left': '-=100px'},1000)
-            }, 3000);
+$(function() {
 
-        }
+    //settings for slider
+    var width = 200;
+    var animationSpeed = 10000;
+    var currentSlide = 1;
+
+    // margin-left: -640px;
+
+    //cache DOM elements
+    var $slider = $('#slider');
+    var $slideContainer = $('.slides', $slider);
+    var $slides = $('.slide', $slider);
+
+
+    function startSlider() {
+        setInterval(function() {
+            $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+                if (++currentSlide === $slides.length) {
+                    currentSlide = 1;
+                    $slideContainer.css('margin-left', 0);
+                }
+            });
+        });
+    }
+
+
+   
+
+    startSlider();
+
+
+});
 
 
 

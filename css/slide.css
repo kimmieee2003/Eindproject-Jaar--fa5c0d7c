@@ -3,33 +3,36 @@
     padding: 0%;
 }
 /* background slide */
-#container{
+.container{
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-}
-#slider .slides{
-    height: 100%;
     max-width: 1800px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    flex-wrap: nowrap;
+}
+#slider{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: nowrap;
+} 
+.slides{
+    height: 100%;
+    max-width: 10000px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: nowrap;
 }
 
 .slide {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-
-}
-
-.slide{
-    overflow: hidden;
     height: 100vh;
     min-width: 1400px;
     display: flex;
+    overflow: hidden;
     flex-direction: row;
     flex-wrap: wrap;
 }
