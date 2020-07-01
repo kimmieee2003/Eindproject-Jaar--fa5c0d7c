@@ -67,5 +67,9 @@
         </div>
 
 </body>
-
+<footer>
+<div id="knop" >
+<a href="studenten_overzicht.php" style="text-decoration:none;">studenten overzicht</a>
+</div>
+</footer>
 </html>
