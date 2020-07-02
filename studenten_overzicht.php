@@ -136,7 +136,7 @@ try {
 
 
         <div class="tietel-studentenlijst">
-            <div>Naam</div> <div>Shuttle</div>  <div>Cijfer</div>   <div>Aanwezigheid</div>
+            <div class="tietleText">Naam</div> <div class="tietleText">Shuttle</div>  <div class="tietleText">Cijfer</div>   <div class="tietleText">Aanwezigheid</div>
         </div>
     <div class="studenten-lijst">
         <div class="student">
