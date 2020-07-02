@@ -5,11 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style-vragen.css">
     <link rel="stylesheet" href="css/vragenlijst-Coach.css">
+    <link rel="stylesheet" href="css/slide.css">
     <link rel="icon" href="images/bit_b_logo_white.png">
 
     <title>Vragen</title>
 </head>
 <body>
+
+    <div class="container">
+        <div id="slider">
+            <ul class="slides">
+                <li class="slide">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                </li>
+                <li class="slide">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                </li>
+                <li class="slide">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                </li>
+                <li class="slide">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                    <img src="https://jarvis.bit-academy.nl/assets/images/space.png">
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <div class="vak">
         <div class="grafiek">
             <div  id="chartContainer">
@@ -82,5 +115,11 @@
 
         </form>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Jquery/jquery.steps.js"></script>
+    <script src="Jquery/jquery.steps.min.js"></script>
+    <script src="js/background.js"></script>
+
 </body>
 </html>
