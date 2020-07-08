@@ -13,11 +13,12 @@
         <img src="https://jarvis.bit-academy.nl/assets/images/logo_black.png">
     </div>
 
-    <form class="form" action="geef_naam.php" method="post">
+    <form class="form" action="vragenlijst1.php" method="post">
 
-        <label for="email"><p>E-mail</p></label>
+        <label for="name"><p>E-mail</p></label>
         <div class="border">
-            <input type="email" placeholder="E-mail" name="email" required>
+            <input type="text" placeholder="Naam" name="name" required> 
+
         </div>
 
         <label for="psw"><p>Password</p></label>
@@ -31,7 +32,8 @@
 
         <button class="submit" type="submit">INLOGGEN</button>
     </form>
+  
     </div>
-
+  
 </body>
 </html>

@@ -35,6 +35,7 @@ try {
 <body>
 
     <form id="form" class="vak" action="vragen2-student.php">
+   <p class ="text"> hallo <?php echo $_POST['name']?></p>
         <label class="text" for="username">Hoe voel je je vandaag op een schaal van 1 tot 10? </label><br>
         <input type="hidden" id="custId" name="custId" value="0">
         <div class="stars" data-rating="0">
