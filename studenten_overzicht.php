@@ -1,24 +1,3 @@
-<?php
-$host = 'localhost';
-$db   = 'healthtracker';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
-try {
-    $dbh = new PDO($dsn, $user, $pass, $options);
-    // echo("Connected to: " . $db . " on " . $host . " version: " . phpversion());
-    // echo("<br>");
-} catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
-}
-
-?>
 <!DOCTYPE.html>
 <html>
 
@@ -28,6 +7,7 @@ try {
 <link rel="stylesheet" href="css/style-overzicht.css">
 <link rel="stylesheet" href="css/studentenoverzicht.css">
 <link rel="icon" href="images/bit_b_logo_white.png">
+<script src="js/depopup.js"></script>
 
 <title>Overzicht</title>
 </head>
@@ -140,85 +120,94 @@ try {
         </div>
     <div class="studenten-lijst">
         <div class="student">
-            <div class="naam-student">Anna</div>
+            <div class="naam-student trigger"><a class="trigger_popup_fricc">Anna</a></div>
+            <div class="shuttle-student trigger">shuttle 4</div>
+            <div class="grafiek-student">5</div>
+            <div class="aanwezigheid-student">Op tijd</div>
+</div>
+        </div>
+        <div class="student">
+            <div class="naam-student trigger">Dennis</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">5</div>
             <div class="aanwezigheid-student">Op tijd</div>
         </div>
         <div class="student">
-            <div class="naam-student">Dennis</div>
-            <div class="shuttle-student">shuttle 4</div>
-            <div class="grafiek-student">5</div>
-            <div class="aanwezigheid-student">Op tijd</div>
-        </div>
-        <div class="student">
-            <div class="naam-student">Esther</div>
+            <div class="naam-student trigger">Esther</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">5</div>
             <div class="aanwezigheid-student">Te laat</div>
         </div>
         <div class="student">
-            <div class="naam-student">Eva</div>
+            <div class="naam-student trigger">Eva</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">4</div>
             <div class="aanwezigheid-student">Op tijd</div>
         </div>
         <div class="student">
-            <div class="naam-student">Mees</div>
+            <div class="naam-student trigger">Mees</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">5</div>
             <div class="aanwezigheid-student">Te laat</div>
         </div>
         <div class="student">
-            <div class="naam-student">Milan</div>
+            <div class="naam-student trigger">Milan</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">5</div>
             <div class="aanwezigheid-student">Te laat</div>
         </div>
         <div class="student">
-            <div class="naam-student">Jeroen</div>
+            <div class="naam-student trigger">Jeroen</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">4</div>
             <div class="aanwezigheid-student">Te laat</div>
         </div>
         <div class="student">
-            <div class="naam-student">Martin</div>
+            <div class="naam-student trigger">Martin</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">9</div>
             <div class="aanwezigheid-student">Op tijd</div>
         </div>
         <div class="student">
-            <div class="naam-student">Senne</div>
+            <div class="naam-student trigger">Senne</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">6</div>
             <div class="aanwezigheid-student">Te laat</div>
         </div>
         <div class="student">
-            <div class="naam-student">Finn</div>
+            <div class="naam-student trigger">Finn</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">5</div>
             <div class="aanwezigheid-student">Op tijd</div>
         </div>
         <div class="student">
-            <div class="naam-student">Myrthe</div>
+            <div class="naam-student trigger">Myrthe</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">7</div>
             <div class="aanwezigheid-student">Op tijd</div>
         </div>
         <div class="student">
-            <div class="naam-student">Jan</div>
+            <div class="naam-student trigger">Jan</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">7</div>
             <div class="aanwezigheid-student">Te laat</div>
         </div>
         <div class="student">
-            <div class="naam-student">Max</div>
+            <div class="naam-student trigger">Max</div>
             <div class="shuttle-student">shuttle 4</div>
             <div class="grafiek-student">8</div>
             <div class="aanwezigheid-student">Op tijd</div>
+ 
         </div>
 
     </div>
+    <div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">&times;</div>
+        <img class="graphclass"src="images/Grafiek.png">
+    </div>
+</div>
 
 
 </body>
