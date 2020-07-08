@@ -1,11 +1,11 @@
-$(function () {
-    $(".trigger_popup_fricc").click(function(){
+$(window).on('load',function () {
+    $(".trigger").on('click',function(){
        $('.hover_bkgr_fricc').show();
     });
-    $('.hover_bkgr_fricc').click(function(){
+    $('.hover_bkgr_fricc').on('click',function(){
         $('.hover_bkgr_fricc').hide();
     });
-    $('.popupCloseButton').click(function(){
+    $('.popupCloseButton').on('click',function(){
         $('.hover_bkgr_fricc').hide();
     });
 });
