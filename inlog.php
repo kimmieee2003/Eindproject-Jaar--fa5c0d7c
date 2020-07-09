@@ -15,9 +15,9 @@
 
     <form class="form" action="vragenlijst1.php" method="post">
 
-        <label for="name"><p>E-mail</p></label>
+        <label for="name"><p>Naam</p></label>
         <div class="border">
-            <input type="text" placeholder="Naam" name="name" required> 
+            <input type="text" placeholder="Name" name="name" required>
 
         </div>
 
