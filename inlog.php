@@ -18,6 +18,7 @@
         <label for="name"><p>Naam</p></label>
         <div class="border">
             <input type="text" placeholder="Name" name="name" required>
+
         </div>
 
         <label for="psw"><p>Password</p></label>
@@ -31,7 +32,8 @@
 
         <button class="submit" type="submit">INLOGGEN</button>
     </form>
+  
     </div>
-
+  
 </body>
 </html>
